@@ -30,5 +30,9 @@ public class HolaMundo{
         //System es la clase que manda a llamar al sistema, es la libreria que se encarga de los comportamientos 
         //Printin es el metodo, pata que el sistema pueda imprimir en pantalla
         //tercera regla, toda linea de codigo tiene un fin con ;
+
+        //Java nos sirve para compilar el archivo
+        //Java es para mandar a llamar el archivo
+        
     }
 }
