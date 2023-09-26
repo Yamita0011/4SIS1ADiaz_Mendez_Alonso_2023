@@ -22,9 +22,12 @@ para elegir alguna de las siguientes 14 opciones:
 // si es entero obtenerlo como entero, si es char obtenerlo como caracter,
 import java.util.Scanner;
 
-class EstructuraControl{
+class EstructurasControl{
 
     //metodo principal
+    /**
+     * @param args
+     */
     public static void main(String[] args){
         //el manejo de objetos, nos ayuda a poder instancear, (mandando a llamar al objeto)
         //para hacer una instancia, es necesario 1. Identificar el tipo objeto
@@ -40,11 +43,12 @@ class EstructuraControl{
         //las variables son de dos tipos globales y locales
         //si la declaro dentro de un metodo es local
 
-        int opcion, numbinario, total, cantidadproducto, num1, lado, lado1, lado2, lado3, base, altura, edad, rst=0, ent=200;
-        float precio, resultado = 0, compra=0, area, perimetro, radio;
+        int opcion, numbinario, total, cantidadproducto, num1, lado, lado1, lado2, lado3, base;
+        int altura, edad, rst=0, ent=200;
+        float precio, resultado = 0, compra=0, area, perimetro;
+        long factorial = 1, n;
         double pi=3.1416, radiocir, perimetrocir, areacir, gradoC, gradoF, gradoK;
-        String nombreproducto;
-        String binario = "";
+        String binario = "", nombreproducto;
         char letra;
 
         do{
@@ -257,14 +261,40 @@ class EstructuraControl{
                         System.out.println("El area del triangulo es: cm2" + area);
 
                             break;
-                     }
-                    break;
                 case 7:
-            
+                
                     break;
+                case 8:
+                System.out.print("Introduce un numero entero >= 0: ");
+                n = entrada.nextInt();
+                if(n > 0){
+                  for (int i = 1; i <= n; i++) {
+                  factorial = factorial * i;
+                  System.out.printf("%d! = %.0f %n", i, factorial);}
+                 }
+                 else if(n <= 0) {
+                    System.out.println("Ingresa un Numero Mayor a 0");
+                 }
+
+            break;
                 case 9:
                     break;
                 case 10:
+                System.out.println("Ingrese el Ancho del Rectangulo");
+                      int ancho = entrada.nextInt();
+                      System.out.println("Ingrese la Altura del Rectangulo");
+                      int altura1 = entrada.nextInt();
+                      for(int fila = 1; fila <= altura1; fila++){
+                        for(int columna = 1; columna <= ancho; columna++){
+                           if(fila == 1 || fila == altura1 || columna == 1 || columna == ancho){
+                              System.out.println("°");
+                           }else{
+                              System.out.println(" ");
+                           }
+                        System.out.println("°");
+                        }
+                        System.out.println("");}
+
                     break;
                 case 11:
                     break;
@@ -288,6 +318,9 @@ class EstructuraControl{
             System.out.println("Deseas repetir el programa?, escribe s para si");
             letra = entrada.next().charAt(0);
 
-        }while(letra == 's' || letra == 'S');
-    }
+        }
+    
+    }while (letra == 's' || letra == 'S');
+    entrada.close();
+}
 }
