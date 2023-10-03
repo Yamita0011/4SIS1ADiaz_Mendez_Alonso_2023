@@ -13,7 +13,6 @@
 //se debe de structurar el tipo de dsto acorde a su entrada
 //si es entero obtenerlo como
 
-import javax.swing.JOptionPane;
 import java.util.Scanner;
 
       class EstructurasControl {
@@ -100,6 +99,7 @@ break;
 case 2:
 System.out.println("ingresa un numero positivo entero que desee comvertir a binario");
 numbinario = entrada.nextInt();
+//Primero tengo que saber que sea positivo
     if (numbinario > 0) {
     //se cuantas veces el numero se va a dividir entre 2
    while (numbinario > 0){
@@ -299,11 +299,8 @@ numbinario = entrada.nextInt();
 						perimetro=L1+L2+L3;
             System.out.println("el area del triangulo es: "+area);
             System.out.println("el perimetro del triangulo es: "+perimetro);
-
-      break;
       }
       break;
-
       case 3:
       System.out.println("ingrese el radio de la esfera");
       radio = entrada.nextInt();
@@ -439,44 +436,46 @@ numbinario = entrada.nextInt();
     case 13:
         do {
            
-            respuesta = JOptionPane.showInputDialog(null, "Seleccione una opción:\n"
-                    + "1. Suma\n"
-                    + "2. Resta\n"
-                    + "3. Multiplicación\n"
-                    + "4. División\n"
-                    + "5. Salir\13n");
-            opcion = Integer.parseInt(respuesta);
+          System.out.println("Seleccione una opción: ");
+          System.out.println("1. Suma");
+          System.out.println("2. Resta");
+          System.out.println("3. Multiplicación");
+          System.out.println("4. División");
+          System.out.println("5. Salir");
+
+          opcion = entrada.nextInt();
+
             if (opcion < 1 || opcion > 5) {
-                JOptionPane.showMessageDialog(null, "Opción inválida.");
-                continue;
+                System.out.println("Opcion invalida");
             }
             if (opcion == 5) {
                 break;
             }
-            respuesta = JOptionPane.showInputDialog(null, "Ingrese el primer número:");
-            Num1 = Double.parseDouble(respuesta);
-            respuesta = JOptionPane.showInputDialog(null, "Ingrese el segundo número:");
-            Num2 = Double.parseDouble(respuesta);
+            System.out.println("Ingrese Primer numero: ");
+            Num1 = entrada.nextInt();
+            System.out.println("Ingrese el segundo número:");
+            Num2 = entrada.nextInt();
+
             switch (opcion) {
                 case 1: // Suma
                     Resultado = Num1 + Num2;
-                    JOptionPane.showMessageDialog(null, "La suma de " + Num1 + " y " + Num2 + " es " + Resultado);
+                    System.out.println( "La suma de " + Num1 + " y " + Num2 + " es " + Resultado);
                     break;
                 case 2: // Resta
                     Resultado = Num1 - Num2;
-                    JOptionPane.showMessageDialog(null, "La resta de " + Num1 + " y " + Num2 + " es " + Resultado);
+                    System.out.println("La resta de " + Num1 + " y " + Num2 + " es " + Resultado);
                     break;
                 case 3: // Multiplicación
                     Resultado = Num1 * Num2;
-                    JOptionPane.showMessageDialog(null, "La multiplicación de " + Num1 + " y " + Num2 + " es " + Resultado);
+                    System.out.println("La multiplicación de " + Num1 + " y " + Num2 + " es " + Resultado);
                     break;
                 case 4: // División
                     if (Num2 == 0) {
-                        JOptionPane.showMessageDialog(null, "No se puede dividir por cero.");
+                        System.out.println("No se puede dividir por cero.");
                         break;
                     }
                     Resultado = Num1 / Num2;
-                    JOptionPane.showMessageDialog(null, "La división de " + Num1 + " y " + Num2 + " es " + Resultado);
+                    System.out.println("La división de " + Num1 + " y " + Num2 + " es " + Resultado);
                     break;
                 default:
                     break;
