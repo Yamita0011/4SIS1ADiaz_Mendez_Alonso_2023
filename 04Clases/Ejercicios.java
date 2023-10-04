@@ -91,7 +91,16 @@ public void Ejercicio1(){
 
         case 'c':
         // Tarea Divicion
+        System.out.println("Introduza el primer número");
+		int numero1 = entrada.nextInt();
+		System.out.println("Introduza el segundo número");
+		int numero2 = entrada.nextInt();
+		
+		int division = numero1 / numero2;
+
+        System.out.println("El resultado de la division es: " + division);
         break;
+
         default:
         System.out.println("opcion no valida, ayos uwu/");
         break;
