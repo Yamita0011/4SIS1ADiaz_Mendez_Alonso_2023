@@ -110,7 +110,64 @@ public void Ejercicio1(){
 }
 
 public void Ejercicio2(){
+    //Vamos a trear un programa que se encrage de convertir 
+    //kg a libras
+    //m/s a Km/h
+    //m a Yardas
+    double metros = 0.00, kg = 0.00, velocidad = 0.00, pulgadas = 39.3701, gramos = 1000, libras = 0.4535592, ms = 0.00;
+    double cm = 100, kmh = 3.6, millas = 0.00062, yardas = 1.0936;
+    double convercion1, convercion2;
+    System.out.println("Seleccione la cantidad que deseas convertir acorde a las siguentes unidades");
+    System.out.println("a.- Metros a Cm y Pulgadas");
+    System.out.println("b.- Kg a Libras y Gramos");
+    System.out.println("c.- m/s a Km/h");
+    System.out.println("d.- Metros a Yardas y Millas");
+    op = entrada.next().charAt(0);
 
+    switch(op){
+        case 'a':
+        System.out.println("Ingresa los Metros que quieras tranformar: ");
+        metros = entrada.nextDouble();
+        convercion1 = metros * cm;
+        convercion2 = metros * pulgadas; 
+
+        System.out.println("La cantidad en metros es " + metros + " de m a cm es " + convercion1);
+        System.out.println("de m a Pulgadas es " + convercion2);
+        break;
+
+        case 'b':
+        System.out.println("Ingresa los Kilogramos que quieras tranformar: ");
+        kg = entrada.nextDouble();
+        convercion1 = kg * gramos;
+        convercion2 = kg * libras; 
+
+        System.out.println("La cantidad de Kilogramos es " + 
+        kg + " de Kg a Gramos es " + convercion1);
+        System.out.println("de Kg a Libras es " + convercion2);
+        break;
+
+        case 'c':
+        System.out.println("Ingresa los m/s que quieras tranformar");
+        ms = entrada.nextDouble();
+        convercion1 = ms * kmh;
+
+        System.out.println("La velocidad en m/s es " + ms + " de m/s a Km/h es " + convercion1);
+        break;
+
+        case 'd':
+        System.out.println("Ingresa los Metros que quieras tranformar: ");
+        metros = entrada.nextDouble();
+        convercion1 = metros * yardas;
+        convercion2 = metros * millas; 
+
+        System.out.println("La cantidad en Metros es " + metros + " de Metros a Yardas es " + convercion1);
+        System.out.println("de Metros a Millas es " + convercion2);
+        break;
+
+        default:
+        System.out.println("Opcion no valida");
+        break;
+    }
 }
 
 public void Ejercicio3(){
