@@ -171,9 +171,40 @@ public void Ejercicio2(){
 }
 
 public void Ejercicio3(){
-
-}
-
+            int n = 5; 
+            //Cambia el valor de n para generar cuadros mágicos de diferentes órdenes
+            int[][] cuadroMagico = new int[n][n];
+    
+            int num = 1;
+            int i = 0;
+            int j = n / 2;
+    
+            while (num <= n * n) {
+                cuadroMagico[i][j] = num;
+                num++;
+                i--;
+                j++;
+                
+                if (i < 0) {
+                    i = n - 1;
+                }
+                if (j >= n) {
+                    j = 0;
+                }
+                if (cuadroMagico[i][j] != 0) {
+                    i += 2;
+                    j--;
+                }
+            }
+            System.out.println("Cuadro Mágico de Orden " + n + ":");
+            for (int row = 0; row < n; row++) {
+                for (int col = 0; col < n; col++) {
+                    System.out.print(cuadroMagico[row][col] + "\t");
+                }
+                System.out.println();
+            }
+        
+        }
 public void Ejercicio4(){
 
 }
