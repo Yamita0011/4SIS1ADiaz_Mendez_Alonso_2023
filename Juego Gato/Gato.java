@@ -1,6 +1,3 @@
-//Integrantes 
-//Diaz Mendez Alonso 
-//Mendoza Palma Arturo
 import java.util.Scanner;
 import java.util.Random;
 
@@ -14,6 +11,10 @@ public class Gato {
         Scanner scanner = new Scanner(System.in);
         inicializarTablero();
         mostrarTablero();
+        System.out.println("Bienvenidos al Juego del Gato");
+        System.out.println("Desarollado por: ");
+        System.out.println("Mendoza Palma Arturo");
+        System.out.println("Diaz Mendez Alonso");
 
         // Determinar símbolos de los jugadores
         System.out.print("Ingresa el símbolo para el Jugador 1 (X u O): ");
@@ -92,7 +93,7 @@ public class Gato {
     private static boolean estaTableroLleno() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (tablero[i][j] == ' ') {0
+                if (tablero[i][j] == ' ') {
                     return false;
                 }
             }
