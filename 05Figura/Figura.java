@@ -41,7 +41,6 @@ public class Figura{
             }
             System.out.println("Para repetir el programa dijite s");
         }while(letra == 's' || letra == 'S');
-
      
     }
     public void calcularCuadrado(){
@@ -75,8 +74,6 @@ public class Figura{
             letra = entrada.next().charAt(0);
         }
     }
-
-    
 
     public void calcularTriangulo(){
         try{
